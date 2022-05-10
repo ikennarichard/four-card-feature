@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-size:14px;
+    font-family: "Poppins",sans-serif;
+}
+
+h1,h2{
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+p{
+    color: hsl(229, 6%, 66%);
+}
+
+header{
+    margin: 80px 30px 74px;
+    text-align: center;
+}
+
+header > h1{
+    margin: 20px 0;
+    font-weight:200;
+}
+
+header > h1 b{
+    font-weight: 600;
+}
+
+header > p{
+    max-width: 520px;
+    margin: auto;
+}
+
+.card-group{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin:auto;
+}
+
+[class$='card']{
+    position: relative;
+    box-sizing: border-box;
+    width: 350px;
+    height: 250px;
+    margin: 0;
+    padding: 32px;
+    border-radius: 10px;
+    border-top: 5px solid black;
+    box-shadow: 0 7px 16px #d7e0ea;
+}
+
+[class$='card'] h2, [class$='card'] p{
+    margin: 0;
+}
+
+[class$='card'] img{
+position: absolute;
+bottom: 32px;
+right: 32px;
+}
+
+.supervisor-card{
+    border-color: hsl(180,62%,55%);
+}
+
+.team-card{
+    border-color: hsl(0, 78%, 62%);
+}
+
+.karma-card{
+    border-color: hsl(34, 97%, 64%);
+}
+
+.calculator-card{
+  border-color: hsl(212, 86%, 64%);
+}
+
+footer{
+    margin-top:80px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:443px){
+    header >h1{
+        font-size:1.6em;
+    }
+}
+
+@media (min-width:788px){
+    .cards-group{
+        width: 728px;
+    }
+
+    .card-group::after{
+        content:"";
+        clear: both;
+        display: table;
+    }
+
+    [class$='card']{
+        float: left;
+    }
+}
+
+@media (min-width:1166px){
+    .card-group{
+        width: 1106px;
+    }
+
+    [class$='card']:first-child{
+        margin: 140px 0;
+    }
+
+    [class$='card']:nth-child(2),
+    [class$='card']:nth-child(3){
+        margin: 0 22px;
+    }
+
+    [class$='card']:last-child{
+        margin-top: -110px;
+    }
+
+    [class$='card']:nth-child(3){
+        margin-top:30px;
+    }
+}
+
+@media (max-width: 1165px){
+    [class$='card']:nth-child(3),
+    [class$='card']:nth-child(4){
+        margin-top: 30px;
+    }
+
+    [class$='card']:nth-child(2),
+    [class$='card']:nth-child(4){
+        margin-left: 29px;
+    }
+}
+
+@media (max-width: 787px){
+    [class$='card']{
+        width: 300px;
+        height: 220px;
+        margin: auto;
+    }
+    [class$='card']:not(:first-child){
+        margin-top: 22px;
+    }
+}
